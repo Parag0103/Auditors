@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/login.css') }}">
+    </head>
+
+    <body>
+      <div class="wrapper fadeInDown">
+        <img src="{{url_for('static', filename='image/logo-no-background.png')}}">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active"> Register </h2>
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="{{url_for('static', filename='/image/UserIcon.jpg')}}" id="icon" alt="User Icon" />
+          </div>
+      
+          <!-- Login Form -->
+          <form>
+            <input type="text" id="UserName" class="fadeIn first" name="username" placeholder="User Name">
+            <!-- <input type="text" id="CompanyName" class="fadeIn Second" name="CompanyName" placeholder="Company Name"> -->
+            <input type="text" id="Email" class="fadeIn Thired" name="email" placeholder="Email">
+            <input type="text" id="password" class="fadeIn Fourtn" name="password" placeholder="Passowrd">
+            <!-- <input type="text" id="confirm_password" class="fadeIn Fivefn" name="confirm_password" placeholder="confirm_password"> -->
+            <input type="submit" class="fadeIn fifth" value="Register" onclick="register()">
+            <button value="registration" onclick="window.Function.call='/register';">Register</button>
+          </form>
+      
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a class="underlineHover" onclick="window.location.href='/login';">Login</a>
+            <a class="underlineHover" onclick="window.location.href='/home';">home</a>
+          </div>
+    </body>
+</html>
